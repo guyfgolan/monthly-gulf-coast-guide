@@ -436,7 +436,7 @@ p { margin: 0; }
 }
 .thanks .portrait { width: 100%; }
 .invite { font-style: italic; font-size: 1.15rem; text-align: left; }
-.sign { display: block; width: min(280px, 100%); margin-top: 12px; }
+.sign { display: block; width: min(280px, 100%); height: auto; margin-top: 12px; }
 .closing {
   margin-top: 28px;
   text-align: center;
