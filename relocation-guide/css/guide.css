@@ -116,6 +116,7 @@ a { color: inherit; }
 }
 .book.block { width: 100%; min-height: 64px; font-size: 1.25rem; letter-spacing: .15em; }
 .book:focus-visible { outline: none; box-shadow: inset 0 0 0 2px #001b35; }
+.book.soon { cursor: default; }
 .nav-scroll { position: relative; }
 .fit { width: 100%; margin: 0 auto; container-type: inline-size; }
 .nav {
@@ -279,6 +280,9 @@ p { margin: 0; }
 .split.even { grid-template-columns: 1fr 1fr; align-items: stretch; }
 .issue-top { grid-template-columns: .9fr 1.2fr; align-items: center; }
 .issue-top .photo { height: auto; }
+.photo.bleed { height: 340px; object-fit: cover; object-position: center; }
+.photo.bleed.truck { height: 270px; }
+.photo.bleed.keys { height: 380px; }
 .issue-bot { display: grid; grid-template-columns: 240px 1fr; gap: 26px; align-items: start; margin-top: 22px; }
 
 .who { text-align: center; }
