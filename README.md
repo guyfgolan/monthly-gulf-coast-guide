@@ -1,8 +1,8 @@
 # Florida Gulf Coast Guide
 
-Guy Golan's weekly web edition. Plain HTML and CSS, so the site can be opened directly or hosted later on GitHub Pages. GitHub Pages is not turned on. Nothing here is published until a reviewed pull request is merged.
+Guy Golan's monthly web edition (one guide, published monthly). Plain HTML and CSS, so the site can be opened directly or hosted later on GitHub Pages. GitHub Pages is not turned on. Nothing here is published until a reviewed pull request is merged.
 
-The first issue is the week of October 23, 2026. It follows the approved v8 print design: navy plates, gold rules, Cinzel headings, a gold page frame, one star fixed at the top center of interior pages, gold-bordered photos, and a zigzag photo layout on the feature pages.
+The first issue is the October 2026 edition (Oct 23, 2026). It follows the approved v8 print design: navy plates, gold rules, Cinzel headings, a gold page frame, one star fixed at the top center of interior pages, gold-bordered photos, and a zigzag photo layout on the feature pages.
 
 ## Preview
 
@@ -21,7 +21,7 @@ index.html                  Front door: latest issue and the archive
 css/guide.css               Shared styles for every issue
 fonts/                      Cinzel and Gelasio (SIL Open Font License)
 assets/a_wordmark.png       Wordmark used on the front door
-issues/2026-10-23/          This week's issue
+issues/2026-10-23/          This month's issue
   index.html
   images/                   Only the photos this issue actually uses
 tools/build_v8.py           Designer's print generator, kept for reference
@@ -29,12 +29,12 @@ tools/magazine_layout_notes.md
 tools/weekly_guide_2026-10-23_v8.html
 ```
 
-`tools/build_v8.py` is the script that produced the approved print file. It is not the web publisher, and it still expects the old print paths. Build each web issue by copying the previous week's HTML.
+`tools/build_v8.py` is the script that produced the approved print file. It is not the web publisher, and it still expects the old print paths. Build each web issue by copying the previous month's HTML.
 
-## Add next week's issue
+## Add next month's issue
 
 1. Copy `issues/2026-10-23` to `issues/YYYY-MM-DD`.
-2. In the new `images/` folder, keep photos you are reusing (the wordmark and headshot usually stay) and replace the story photos. Use only real photos supplied for that week. Do not add stock or AI images. If a photo is not ready, leave a labeled placeholder the way the happy-hour page does.
+2. In the new `images/` folder, keep photos you are reusing (the wordmark and headshot usually stay) and replace the story photos. Use only real photos supplied for that month. Do not add stock or AI images. If a photo is not ready, leave a labeled placeholder the way the happy-hour page does.
 3. Edit `issues/YYYY-MM-DD/index.html`. Change the date, issue number, sections, charts, and source lines. Keep the plate structure:
    - Double gold frame and corner marks on every plate.
    - One gold star, top center, on interior plates only. The cover has no frame star, because the star already lives in the wordmark.
