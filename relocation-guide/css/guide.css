@@ -115,7 +115,6 @@ a { color: inherit; }
 }
 .book.block { width: 100%; min-height: 64px; font-size: 1.25rem; letter-spacing: .15em; }
 .book:focus-visible { outline: none; box-shadow: inset 0 0 0 2px #001b35; }
-.book.soon { cursor: default; }
 .nav-scroll { position: relative; }
 .fit { width: 100%; margin: 0 auto; container-type: inline-size; }
 .nav {
@@ -452,5 +451,11 @@ p { margin: 0; }
 
 .section-label {
   margin: 16px 0 10px;
+  text-align: center;
+}
+.estimate-label {
+  margin: 18px 0 0;
+  font-size: 1.25rem;
+  letter-spacing: .08em;
   text-align: center;
 }
