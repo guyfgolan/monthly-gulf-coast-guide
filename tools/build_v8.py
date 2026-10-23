@@ -165,7 +165,7 @@ pages.append(page(f'''<h1>Tools</h1><h2>Run the numbers · Then talk to Guy</h2>
 {tool("Mortgage Calculator","Estimate your monthly payment with taxes, insurance and HOA.",P("[URL pending]"),pend)}
 {tool("Cost-of-Moving Estimator","See what a move to the Gulf Coast really costs before you pack.","guyfgolan.github.io/relocation-cost-estimator",f'<img class="qr" src="{S}qr_moving.png">')}
 {tool("Area Matcher · Discover Sarasota-Tampa Bay","Answer a few questions and find the areas that fit how you live.",P("[URL pending]"),pend)}
-{tool("Buying or selling? Scan to schedule a call","Book a time with Guy Golan. Call/Text 301-919-6726 · guy@floridagulfcoastguide.com","calendar.app.google/8GQcVfui78JUZLCP7",f'<img class="qr" src="{S}qr_call.png">')}''',
+{tool("Buying or selling? Scan to schedule a call","Book a time with Guy Golan. Call/Text 301-919-6726 · guy@floridagulfcoastguide.com","calendar.app.google/5xtMmGSY9kCY5NRk7",f'<img class="qr" src="{S}qr_call.png">')}''',
  'Tools are for estimates only and are not financial advice. Guy Golan, eXp Realty. DRAFT, not for publication. '+ACC))
 html=f'<html><head><meta charset=utf-8><style>{css}</style></head><body>{"".join(pages)}</body></html>'
 open('/workspace/weekly_guide/weekly_guide_2026-10-23_v8.html','w').write(html)
