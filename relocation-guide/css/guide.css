@@ -162,11 +162,12 @@ a:focus-visible { outline: 2px solid var(--cream); outline-offset: 3px; }
   content: "";
   position: absolute;
   pointer-events: none;
-  border-color: var(--gold);
+  border-color: #d99a13;
   border-style: solid;
+  border-width: 1px;
 }
-.plate:not(.cover)::before { inset: 12px; border-width: 1.5px; }
-.plate:not(.cover)::after { inset: 18px; border-width: 1px; }
+.plate:not(.cover)::before { inset: 22px; }
+.plate:not(.cover)::after { inset: 32px; }
 
 .star { display: block; width: 210px; margin: 0 auto 8px; }
 .wordmark { width: min(560px, 88%); height: auto; }
@@ -277,6 +278,7 @@ p { margin: 0; }
 .split.flip { grid-template-columns: .85fr 1.15fr; }
 .split.even { grid-template-columns: 1fr 1fr; align-items: stretch; }
 .issue-top { grid-template-columns: .9fr 1.2fr; align-items: center; }
+.issue-top .photo { height: auto; }
 .issue-bot { display: grid; grid-template-columns: 240px 1fr; gap: 26px; align-items: start; margin-top: 22px; }
 
 .who { text-align: center; }
@@ -430,12 +432,27 @@ p { margin: 0; }
 
 .thanks {
   display: grid;
-  grid-template-columns: 240px 1fr;
-  gap: 24px;
-  align-items: center;
+  grid-template-columns: 220px 1fr;
+  column-gap: 52px;
   margin-top: 28px;
+  align-items: stretch;
 }
-.thanks .portrait { width: 100%; }
+.thanks .portrait { width: 220px; height: auto; object-fit: cover; }
+.thanks-copy {
+  position: relative;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  min-height: 100%;
+}
+.thanks .invite { margin: 0; }
+.thanks .sign {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 210px;
+  margin: 0;
+}
 .invite { font-style: italic; font-size: 1.15rem; text-align: left; }
 .sign { display: block; width: min(280px, 100%); height: auto; margin-top: 12px; }
 .closing {
