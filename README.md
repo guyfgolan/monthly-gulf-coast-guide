@@ -1,4 +1,4 @@
-# weekly-gulf-coast-guide
+# monthly-gulf-coast-guide
 
 ## Relocation guide
 
