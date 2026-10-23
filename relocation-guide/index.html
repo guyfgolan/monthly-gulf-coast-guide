@@ -2,13 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=1280">
   <meta name="robots" content="noindex">
   <title>Florida Gulf Coast Guide — October 2026</title>
   <meta name="description" content="Guy Golan's October 2026 Florida Gulf Coast relocation guide: the market, communities, moving costs, and insurance.">
   <link rel="stylesheet" href="css/guide.css">
 </head>
 <body>
+<div class="fit" id="fit">
   <a class="skip" href="#content">Skip to content</a>
   <header class="mast">
     <div class="mast-row">
@@ -466,5 +467,29 @@
       <p class="note">Insurance figures are averages of policies in force, not quotes. Moving costs are published averages. Payments are illustrative, not rate quotes.</p>
     </section>
   </main>
+</div>
+<script>
+(function () {
+  var DESIGN = 1280;
+  var root = document.getElementById("fit");
+  function fit() {
+    var vw = document.documentElement.clientWidth;
+    var vv = window.visualViewport;
+    var alreadyScaled = vv && vv.scale < 0.999;
+    if (vw >= DESIGN || alreadyScaled) {
+      root.style.width = "";
+      root.style.zoom = "1";
+      return;
+    }
+    root.style.width = DESIGN + "px";
+    root.style.zoom = String(vw / DESIGN);
+    var next = document.documentElement.clientWidth;
+    if (next !== vw && next < DESIGN) root.style.zoom = String(next / DESIGN);
+  }
+  window.addEventListener("resize", fit);
+  if (window.visualViewport) window.visualViewport.addEventListener("resize", fit);
+  fit();
+})();
+</script>
 </body>
 </html>

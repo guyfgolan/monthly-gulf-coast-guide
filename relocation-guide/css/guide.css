@@ -117,8 +117,7 @@ a { color: inherit; }
 .book:focus-visible { outline: none; box-shadow: inset 0 0 0 2px #001b35; }
 .book.soon { cursor: default; }
 .nav-scroll { position: relative; }
-.nav-scroll::before,
-.nav-scroll::after { content: ""; display: none; pointer-events: none; }
+.fit { width: 100%; margin: 0 auto; container-type: inline-size; }
 .nav {
   width: 100%;
   max-width: 1100px;
@@ -175,7 +174,7 @@ a:focus-visible { outline: 2px solid var(--cream); outline-offset: 3px; }
   margin: 28px 0 0;
   font-family: Cinzel, serif;
   font-weight: 700;
-  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  font-size: clamp(1.8rem, 4cqw, 2.4rem);
   letter-spacing: .04em;
   color: var(--cream);
 }
@@ -186,7 +185,7 @@ h2 {
   text-align: center;
   font-family: Cinzel, serif;
   font-weight: 700;
-  font-size: clamp(1.55rem, 3.4vw, 2.15rem);
+  font-size: clamp(1.55rem, 3.4cqw, 2.15rem);
   letter-spacing: .04em;
   text-transform: uppercase;
   line-height: 1.15;
@@ -454,69 +453,4 @@ p { margin: 0; }
 .section-label {
   margin: 16px 0 10px;
   text-align: center;
-}
-
-@media (max-width: 800px) {
-  :root { --header: 96px; }
-  .plate { margin: 14px 10px; padding: 40px 18px 28px; }
-  .plate:not(.cover)::before { inset: 8px; }
-  .plate:not(.cover)::after { inset: 13px; }
-  .nav-scroll::after {
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: 52px;
-    background: linear-gradient(90deg, rgba(0, 27, 53, 0), #001b35 70%);
-  }
-  .nav-scroll::before {
-    display: block;
-    position: absolute;
-    z-index: 1;
-    right: 8px;
-    top: 50%;
-    transform: translateY(-58%);
-    color: var(--gold);
-    font-size: 1.45rem;
-    line-height: 1;
-    content: "›";
-  }
-  .grid-2, .grid-3, .split, .split.flip, .split.even, .issue-top, .issue-bot,
-  .dollars, .florence, .zig, .zig.rev, .thanks {
-    grid-template-columns: 1fr;
-  }
-  .grid-2 > *,
-  .grid-3 > *,
-  .zig > * {
-    border-left: 0;
-    padding-left: 0;
-  }
-  .grid-2 > * + *,
-  .grid-3 > * + *,
-  .zig > * + * {
-    border-top: 1px solid var(--line);
-    margin-top: 16px;
-    padding-top: 16px;
-  }
-  .issue-top .photo { height: 220px; max-height: 220px; object-fit: cover; }
-  .bars, .caps { grid-template-columns: 1fr 1fr; }
-  .dollars .rule-v { display: none; }
-  .issue-bot { gap: 18px; }
-  .contents { border-left: 0; border-top: 1px solid var(--line); padding: 14px 0 0; }
-  .details { border-left: 0; border-top: 1px solid var(--line); padding: 16px 0 0; }
-  .media { min-height: 240px; height: 260px; }
-  .wide { height: 220px; }
-  .banner { height: 150px; }
-  .zig img { height: 200px; }
-  .pays { gap: 4px; }
-  .pay-col { width: 72px; }
-  .pay-col i { width: 48px; left: 12px; right: 12px; }
-  .brand { font-size: .78rem; letter-spacing: .05em; }
-  .book,
-  .book.block,
-  .cta .book { letter-spacing: .15em; }
-  .book { padding: 9px 10px; font-size: .72rem; }
-  .book.block { font-size: 1rem; min-height: 56px; }
-  .cta h3 { min-height: 0; }
 }
