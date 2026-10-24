@@ -518,3 +518,7 @@ main > .plate:first-child { margin-top: 0; }
 .tools-box .grid-3 { margin-top: 26px; }
 /* 2026-10-24i: tighter padding overall, extra room below the buttons */
 .tools-box { padding: 30px 32px 46px; }
+/* 2026-10-24j: tools columns shifted up under Interactive Tools; symmetric columns so every title, divider and button is truly centered */
+.tools-box .grid-3 { margin-top: 18px; gap: 0; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.tools-box .grid-3 > .panel { padding: 0 16px; }
+.tools-box .cta h3 { margin: 0; align-items: flex-start; }
