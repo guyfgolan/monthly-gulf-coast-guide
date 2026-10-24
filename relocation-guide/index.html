@@ -7,6 +7,20 @@
   <title>Florida Gulf Coast Guide — October 2026</title>
   <meta name="description" content="Guy Golan's October 2026 Florida Gulf Coast relocation guide: the market, communities, moving costs, and insurance.">
   <link rel="stylesheet" href="css/guide.css?v=2026-10-24l">
+  <!-- Google tag (gtag.js), GA4 G-CF6TKV3NLK. Not loaded on localhost or file:// so local tests never reach Guy's analytics. -->
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  (function () {
+    if (/^(localhost|127\.0\.0\.1|\[::1\]|)$/.test(location.hostname)) return;
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=G-CF6TKV3NLK";
+    document.head.appendChild(s);
+    gtag("js", new Date());
+    gtag("config", "G-CF6TKV3NLK", { linker: { domains: ["guyfgolan.github.io", "floridagulfcoastguide.com"] } });
+  })();
+  </script>
 </head>
 <body>
 <div class="fit" id="fit">
@@ -16,7 +30,7 @@
       <a class="brand" href="#cover">October 2026</a>
       <div class="mast-actions">
         <a class="book" href="relocation_guide_v7_23u.pdf">Download the PDF</a>
-        <a class="book" href="https://calendar.app.google/5xtMmGSY9kCY5NRk7">Book a Call</a>
+        <a class="book" href="https://calendar.app.google/5xtMmGSY9kCY5NRk7" target="_blank" rel="noopener">Book a Call</a>
       </div>
     </div>
     <div class="nav-scroll">
@@ -441,7 +455,7 @@
           <img class="sign" src="images/guy-signature.png" width="1200" height="472" alt="Guy Golan signature">
         </div>
       </div>
-      <p class="mt"><a class="book block" href="https://calendar.app.google/5xtMmGSY9kCY5NRk7">Book a Call</a></p>
+      <p class="mt"><a class="book block" href="https://calendar.app.google/5xtMmGSY9kCY5NRk7" target="_blank" rel="noopener">Book a Call</a></p>
       <div class="closing">
         <div class="rule"></div>
         <p class="broker"><span>Guy Golan · REALTOR<sup>®</sup></span> <img src="images/exp-realty-logo.png" alt="eXp Realty"></p>
@@ -485,6 +499,49 @@
   }
   window.addEventListener("resize", fit);
   fit();
+})();
+</script>
+<script>
+/* GA4 click events: book_call, pdf_download, tool_click.
+   Booking links open a new tab, so their event always gets out. The PDF and tool links open in this tab,
+   so a plain left-click waits for GA to confirm the event (max 1 s) before navigating. */
+(function () {
+  var TOOLS = [
+    [/relocation-cost-estimator\/cost-of-living\//, "cost_of_living"],
+    [/relocation-cost-estimator\//, "moving_estimator"],
+    [/yourarea\.floridagulfcoastguide\.com/, "area_locator"]
+  ];
+  function sendThenGo(e, a, name, params) {
+    var plain = !e.defaultPrevented && e.button === 0 && !e.metaKey && !e.ctrlKey && !e.shiftKey && !e.altKey &&
+      (!a.target || a.target === "_self") && window.google_tag_manager;
+    if (!plain) { gtag("event", name, params); return; }
+    e.preventDefault();
+    var done = false;
+    function go() { if (!done) { done = true; location.href = a.href; } }
+    params.event_callback = go;
+    params.event_timeout = 800;
+    gtag("event", name, params);
+    setTimeout(go, 1000);
+  }
+  document.addEventListener("click", function (e) {
+    var a = e.target && e.target.closest ? e.target.closest("a[href]") : null;
+    if (!a) return;
+    var url = a.href, text = (a.textContent || "").replace(/\s+/g, " ").trim();
+    if (/^https?:\/\/calendar\.app\.google\//.test(url)) {
+      gtag("event", "book_call", { link_url: url, page_location: location.href, link_text: text, source_page: "guide", transport_type: "beacon" });
+      return;
+    }
+    if (/\.pdf([?#]|$)/i.test(url)) {
+      sendThenGo(e, a, "pdf_download", { link_url: url, file_name: url.split("/").pop().split(/[?#]/)[0], page_location: location.href, link_text: text, source_page: "guide", transport_type: "beacon" });
+      return;
+    }
+    for (var i = 0; i < TOOLS.length; i++) {
+      if (TOOLS[i][0].test(url)) {
+        sendThenGo(e, a, "tool_click", { link_url: url, tool_name: TOOLS[i][1], page_location: location.href, link_text: text, source_page: "guide", transport_type: "beacon" });
+        return;
+      }
+    }
+  });
 })();
 </script>
 </body>
