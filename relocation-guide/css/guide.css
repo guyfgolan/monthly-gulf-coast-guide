@@ -506,3 +506,5 @@ main > .plate:first-child { margin-top: 0; }
 /* 2026-10-24e: date moved to the header bar top-left; logo centered in the cover */
 .mast-actions { margin-left: auto; }
 .plate.cover { padding: 120px 36px 120px; }
+/* 2026-10-24f: standard gap between every page's gold star and its title */
+.plate .star { margin-bottom: 22px; }
