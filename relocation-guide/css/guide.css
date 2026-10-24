@@ -501,6 +501,9 @@ main > .plate:first-child { margin-top: 0; }
 .fit { width: 920px; }
 .plate { margin-left: 0; margin-right: 0; }
 /* 2026-10-24c: cover logo centered in the cover block */
-.plate.cover { padding: 92px 36px 92px; }
 .cover h1 { display: block; text-align: center; }
 .cover .wordmark { display: block; margin: 0 auto; }
+/* 2026-10-24d: no brand text in the header bar; logo centered in the cover */
+.mast-actions { margin-left: auto; }
+.plate.cover { padding: 120px 36px 120px; }
+.cover-date { position: absolute; left: 0; right: 0; margin: 34px 0 0; }
