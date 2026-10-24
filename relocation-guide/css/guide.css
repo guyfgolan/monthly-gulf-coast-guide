@@ -516,5 +516,5 @@ main > .plate:first-child { margin-top: 0; }
 /* 2026-10-24h: more breathing room inside the tools box, balanced top and bottom */
 .tools-box { padding: 24px 20px 24px; }
 .tools-box .grid-3 { margin-top: 26px; }
-/* 2026-10-24i: comfortable padding on all sides inside the tools box */
-.tools-box { padding: 40px 44px 40px; }
+/* 2026-10-24i: tighter padding overall, extra room below the buttons */
+.tools-box { padding: 30px 32px 46px; }
