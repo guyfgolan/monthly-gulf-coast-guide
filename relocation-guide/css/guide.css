@@ -500,3 +500,7 @@ main > .plate:first-child { margin-top: 0; }
 /* 2026-10-24b: page width = guide width (no side bleed) */
 .fit { width: 920px; }
 .plate { margin-left: 0; margin-right: 0; }
+/* 2026-10-24c: cover logo centered in the cover block */
+.plate.cover { padding: 92px 36px 92px; }
+.cover h1 { display: block; text-align: center; }
+.cover .wordmark { display: block; margin: 0 auto; }
