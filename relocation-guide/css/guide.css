@@ -491,3 +491,8 @@ p { margin: 0; }
   letter-spacing: .08em;
   text-align: center;
 }
+
+/* 2026-10-24: header matches the brochure width (920px plates) */
+.mast { max-width: 920px; margin: 0 auto; box-sizing: border-box; }
+.mast-row, .nav { max-width: 920px; box-sizing: border-box; }
+main > .plate:first-child { margin-top: 0; }
