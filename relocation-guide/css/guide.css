@@ -399,6 +399,7 @@ p { margin: 0; }
   line-height: 1.3;
 }
 
+.story .photo { margin-bottom: 18px; height: auto; }
 .story p + p { margin-top: 12px; }
 .drop::first-letter {
   float: left;
