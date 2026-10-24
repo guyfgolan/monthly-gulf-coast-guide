@@ -513,3 +513,6 @@ main > .plate:first-child { margin-top: 0; }
 .tools-box { border: 2px solid var(--gold); border-radius: 6px; padding: 18px 20px 22px; margin-top: 22px; }
 .tools-box .estimate-label { margin-top: 0; }
 .tools-sub { margin: 4px 0 0; text-align: center; color: var(--gold); font-size: .78rem; letter-spacing: .18em; text-transform: uppercase; }
+/* 2026-10-24h: more breathing room inside the tools box, balanced top and bottom */
+.tools-box { padding: 24px 20px 24px; }
+.tools-box .grid-3 { margin-top: 26px; }
