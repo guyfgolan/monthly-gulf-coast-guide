@@ -541,3 +541,9 @@ main > .plate:first-child { margin-top: 0; }
 .issue-bot .who .broker { display: block; margin-top: 5.3px; margin-bottom: 5px; letter-spacing: .07em; }
 .issue-bot .who .broker sup { font-size: .6em; letter-spacing: 0; }
 .issue-bot .who .broker img { display: inline; height: 19.6px; width: auto; margin-left: 9px; vertical-align: -5.4px; }
+
+/* 2026-10-24l: photo as 2nd child of .zig (Spencer Glen Buzz) must keep its full gold frame, not the column divider */
+.zig > .photo:nth-child(2) {
+  border-left: 1px solid var(--gold);
+  padding-left: 0;
+}
