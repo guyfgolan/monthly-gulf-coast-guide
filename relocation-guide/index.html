@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=960">
+  <meta name="viewport" content="width=920">
   <meta name="robots" content="noindex">
   <title>Florida Gulf Coast Guide — October 2026</title>
   <meta name="description" content="Guy Golan's October 2026 Florida Gulf Coast relocation guide: the market, communities, moving costs, and insurance.">
@@ -470,24 +470,20 @@
 </div>
 <script>
 (function () {
-  var DESIGN = 960;
+  /* 2026-10-24: the page is exactly the guide's 920px width, scaled to fill the screen (no side bleed) */
+  var DESIGN = 920;
   var root = document.getElementById("fit");
   function fit() {
-    var vw = document.documentElement.clientWidth;
     var vv = window.visualViewport;
-    var alreadyScaled = vv && vv.scale < 0.999;
-    if (vw >= DESIGN || alreadyScaled) {
-      root.style.width = "";
-      root.style.zoom = "1";
-      return;
-    }
+    if (vv && vv.scale > 1.001) return; /* user pinch-zoomed: leave it */
     root.style.width = DESIGN + "px";
+    root.style.zoom = "1";
+    var vw = document.documentElement.clientWidth;
     root.style.zoom = String(vw / DESIGN);
     var next = document.documentElement.clientWidth;
-    if (next !== vw && next < DESIGN) root.style.zoom = String(next / DESIGN);
+    if (next !== vw) root.style.zoom = String(next / DESIGN);
   }
   window.addEventListener("resize", fit);
-  if (window.visualViewport) window.visualViewport.addEventListener("resize", fit);
   fit();
 })();
 </script>
