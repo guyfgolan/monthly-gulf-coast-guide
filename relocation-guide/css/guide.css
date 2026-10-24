@@ -522,3 +522,22 @@ main > .plate:first-child { margin-top: 0; }
 .tools-box .grid-3 { margin-top: 18px; gap: 0; grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .tools-box .grid-3 > .panel { padding: 0 16px; }
 .tools-box .cta h3 { margin: 0; align-items: flex-start; }
+/* 2026-10-24k: In This Issue profile block matches the PDF (p. 2): left-aligned under a column-wide portrait */
+.issue-bot .who { text-align: left; margin-top: 39px; }
+.issue-bot .who .portrait {
+  width: 234px;
+  height: 200px;
+  max-width: none;
+  margin: 3px;
+  border: 1px solid var(--cream);
+  outline: 1px solid var(--gold);
+  outline-offset: 2px;
+  object-fit: cover;
+  object-position: center 19%;
+}
+.issue-bot .who .rule { width: 73px; margin: 17px 0 0 3px; }
+.issue-bot .who p { font-size: .95rem; line-height: 1.5; color: var(--cream); }
+.issue-bot .who .name { font-size: 1.3rem; line-height: 1.3; letter-spacing: .03em; margin-top: 10px; }
+.issue-bot .who .broker { display: block; margin-top: 5.3px; margin-bottom: 5px; letter-spacing: .07em; }
+.issue-bot .who .broker sup { font-size: .6em; letter-spacing: 0; }
+.issue-bot .who .broker img { display: inline; height: 19.6px; width: auto; margin-left: 9px; vertical-align: -5.4px; }
